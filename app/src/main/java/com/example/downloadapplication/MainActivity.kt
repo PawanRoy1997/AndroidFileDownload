@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         downloadBtn.setOnClickListener { downloadFile() }
+        findViewById<Button>(R.id.viaDownloadManager).setOnClickListener { startActivity(Intent(this, ViaDownloadManager::class.java)) }
     }
 
     private fun downloadFile() {
